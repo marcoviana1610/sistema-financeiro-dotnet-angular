@@ -1,8 +1,10 @@
 using Domain.Interfaces.Generics;
 using Domain.Interfaces.ICategoria;
 using Domain.Interfaces.IDespesa;
+using Domain.Interfaces.InterfaceServicos;
 using Domain.Interfaces.ISistemaFinanceiro;
 using Domain.Interfaces.IUsuarioSistemaFinanceiro;
+using Domain.Services;
 using Entities.Entities;
 using Infra.Configuration;
 using Infra.Repository;
@@ -33,7 +35,11 @@ builder.Services.AddSingleton<InterfaceDespesa, RepositorioDespesa>();
 builder.Services.AddSingleton<InterfaceSistemaFinanceiro, RepositorioSistemaFinanceiro>();
 builder.Services.AddSingleton<InterfaceUsuarioSistemaFinanceiro, RepositorioUsuarioSistemaFinanceiro>();
 
-
+// SERVIÇOS DOMÍNIO
+builder.Services.AddSingleton<ICategoriaService, CategoriaService>();
+builder.Services.AddSingleton<IDespesaService, DespesaService>();
+builder.Services.AddSingleton<ISistemaFinanceiroService, SistemaFinanceiroService>();
+builder.Services.AddSingleton<IUsuarioSistemaFinanceiroService, UsuarioSistemaFinanceiroService>();
 
 
 
