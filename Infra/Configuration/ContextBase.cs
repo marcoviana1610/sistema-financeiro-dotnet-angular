@@ -40,7 +40,7 @@ namespace Infra.Configuration
 
         public string ObterStringConexao()
         {
-            return "Data Source=WIN-VLVMF5SRQ5J\\SQLEXPRESS; Initial Catalog=FINANCEIRO_2023; Integrated Security=False; User ID=sa; Password=mbl2009; Connection Timeout=15;";
+            return "Data Source=WIN-VLVMF5SRQ5J\\SQLEXPRESS; Initial Catalog=FINANCEIRO_2023; Integrated Security=False; User ID=sa; Password=mbl2009; Connection Timeout=15;Encrypt=False;TrustServerCertificate=False";
 
         }
 
